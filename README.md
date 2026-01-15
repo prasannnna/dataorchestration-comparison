@@ -57,7 +57,7 @@ data-orchestration-comparison/
 
 ---
 
-##  Input Dataset: user_events.csv(synthetic_events.csv)
+##  Input Dataset: synthetic_events.csv
 
 The input data used across all three orchestration frameworks is a synthetic dataset stored at:
 
