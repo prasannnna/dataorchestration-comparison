@@ -17,7 +17,7 @@ This directory contains the Apache Airflow implementation of the ETL pipeline.
 ```
 airflow/
 ├── dags/
-│ └── user_etl_pipeline.py
+│ └── airflow_etl_dag.py
 ├── docker-compose.yml
 └── README.md
 

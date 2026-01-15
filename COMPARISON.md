@@ -12,7 +12,7 @@ This project presents a **hands-on, implementation-based comparison** of three m
 * **Prefect**
 * **Dagster**
 
-The comparison is performed by implementing the **exact same ETL pipeline** in all three frameworks, using a shared business logic layer and a synthetic user activity dataset (`user_events.csv`).
+The comparison is performed by implementing the **exact same ETL pipeline** in all three frameworks, using a shared business logic layer and a synthetic user activity dataset (`synthetic_events.csv`).
 
 The goal is to evaluate the frameworks based on:
 
@@ -31,8 +31,8 @@ All pipelines reuse **identical transformation logic** to ensure a fair, apples-
 
 ### Synthetic Dataset Description
 
-* **File name:** `user_events.csv`
-* **Location:** `data/input/user_events.csv`
+* **File name:** `synthetic_events.csv`
+* **Location:** `data/input/synthetic_events.csv`
 * **Type:** Synthetic user activity data
 
 **Fields:**
@@ -206,7 +206,7 @@ Airflow requires the most setup but provides the most operational features.
 
 All three pipelines were executed using:
 
-* The same synthetic input dataset (`user_events.csv`)
+* The same synthetic input dataset (`synthetic_events.csv`)
 * Identical transformation logic
 * Identical parameters
 

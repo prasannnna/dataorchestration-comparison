@@ -7,7 +7,7 @@ from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 from shared.etl_logic import extract_data, transform_data, load_data
 
-INPUT_PATH = "/opt/airflow/data/input/user_events.csv"
+INPUT_PATH = "/opt/airflow/data/input/synthetic_events.csv"
 OUTPUT_PATH = "/opt/airflow/data/output/airflow"
 
 default_args = {

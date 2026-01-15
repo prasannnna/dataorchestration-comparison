@@ -63,7 +63,7 @@ The input data used across all three orchestration frameworks is a synthetic dat
 
 
 ```
-data/input/user_events.csv
+data/input/synthetic_events.csv
 ```
 
 ### Dataset Description

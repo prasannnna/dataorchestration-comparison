@@ -27,6 +27,6 @@ def prefect_etl(input_path, output_path):
 
 if __name__ == "__main__":
     prefect_etl(
-        "data/input/user_events.csv",
+        "data/input/synthetic_events.csv",
         "data/output/prefect"
     )
