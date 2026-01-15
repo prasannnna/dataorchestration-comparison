@@ -1,0 +1,12 @@
+services:
+  dagster:
+    image: python:3.11-slim
+    container_name: dagster
+    working_dir: /app
+    volumes:
+      - ..:/app
+    command: >
+      bash -c "
+      pip install dagster pandas pyarrow &&
+      dagster job execute -f dagster/dagster_job.py
+      "

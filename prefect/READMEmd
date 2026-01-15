@@ -1,0 +1,86 @@
+# Prefect Implementation
+
+This directory contains the Prefect implementation of the ETL pipeline using Prefect 2.x.
+
+---
+
+##  Tools & Technologies
+- Prefect
+- Python
+- Docker & Docker Compose
+- Pandas
+- PyArrow
+
+---
+
+## Structure
+```
+prefect/
+├── prefect_flow.py
+├── docker-compose.yml
+└── README.md
+```
+
+
+---
+
+##  How to Run Prefect Pipeline
+
+### Step 1: Start the Prefect container
+
+```bash
+docker-compose up
+```
+### The container:
+
+- Installs dependencies
+
+- Executes the Prefect flow
+
+- Exits after successful completion
+
+### Retry Configuration
+- Retries are configured at the task level using decorators:
+
+```
+@task(retries=2, retry_delay_seconds=10)
+```
+- Retries are triggered only when a failure occurs.
+- In the provided execution, all tasks succeeded on the first attempt.
+
+### Execution Evidence
+### Execution logs show:
+
+- Flow creation
+
+- Task execution order
+
+- Successful completion of extract, transform, and load steps
+
+- Logs are captured using:
+
+```
+docker logs prefect
+```
+
+### Included Screenshot
+
+1. **flow_success.png**
+   - Shows successful execution of the Prefect flow
+   - Confirms execution of extract, transform, and load tasks
+   - Demonstrates task orchestration using Prefect
+   - Access at **screenshots/prefect/flow_success.png**
+
+### Note on Retries
+
+Retry logic is configured at the task level using the `@task` decorator.
+Retries are triggered only when a task fails.  
+In the captured execution, all tasks succeeded on the first attempt, so no retry was required or triggered.
+
+The retry configuration is visible in the pipeline code.
+
+
+### Stop Services
+```
+docker-compose down
+```
